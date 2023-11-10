@@ -2,6 +2,8 @@ package sorting;
 
 /**
  * This class provides a method to sort an array using the QuickSort algorithm.
+ * Time complexity: O(n log n)/O(n**2)
+ * Space complexity: O(log n)/O(n)
  */
 public class QuickSort {
 
@@ -30,7 +32,7 @@ public class QuickSort {
      * @param right the ending index of the portion to be partitioned
      * @return the index of the pivot after partitioning
      */
-    public static int partition(int[] arr, int left, int right) {
+    private static int partition(int[] arr, int left, int right) {
         int middle = left + (right - left) / 2;
 
         swap(arr, middle, right);
@@ -63,7 +65,7 @@ public class QuickSort {
      * @param i   the index of the first element
      * @param j   the index of the second element
      */
-    public static void swap(int[] arr, int i, int j) {
+    private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
